@@ -8,29 +8,16 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Students Stats routes', () => {
-  it('Should return student stats by id', (done) => {
+  it('Should return array of student stats', (done) => {
     chai.request(server)
-      .get('/students/2')
+      .get('/students')
       .end((err, res) => {
         res.should.have.status(200);
-        res.body.should.be.a('object');
-        expect(res.body.name).to.be.equal('Vitalii Pidhornyi');
+        res.body.should.be.a('array');
+        res.body.length.should.be.eql(3);
         done();
       });
   });
-
-
-  it('Should return student stats not found error', (done) => {
-    chai.request(server)
-      .get(`/students/125`)
-      .end((err, res) => {
-        res.should.have.status(404);
-        res.body.should.be.a('object');
-        expect(res.body.message).to.be.equal('Resource was not found');
-        done();
-      });
-  });
-
 
   it('Should return student stats with the worst homework score', (done) => {
     chai.request(server)

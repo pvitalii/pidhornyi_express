@@ -1,4 +1,5 @@
-import httpErrors from 'http-errors';
+import createHttpError from "http-errors";
+
 
 export function bodyValidator(schema) {
   return (req, res, next) => {
@@ -8,7 +9,7 @@ export function bodyValidator(schema) {
 
     if (validationResult.error) {
       const errorMessage = validationResult.error.details.map(d => d.message.replaceAll('"', ''));
-      throw httpErrors.BadRequest(errorMessage)
+      throw createHttpError.BadRequest(errorMessage)
     }
 
     return next();

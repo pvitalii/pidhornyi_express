@@ -11,17 +11,17 @@
 
 # Routes
 ## Users routes:
-- [GET] http://localhost:3000/users
-- [GET] http://localhost:3000/users/:email
-- [POST] http://localhost:3000/users
-- [PATCH] http://localhost:3000/users/:id
-- [DELETE] http://localhost:3000/users/:email
+- [GET] /users
+- [GET] /users/:email
+- [POST] /users
+- [PATCH] /users/:id
+- [DELETE] /users/:email
 
 ## Articles routes
-- [GET] http://localhost:3000/articles
-- [POST] http://localhost:3000/articles
-- [PATCH] http://localhost:3000/articles/:id
+- [GET] /articles
+- [POST] /articles
+- [PATCH] /articles/:id
 
 ## Students stats routes
-- [GET] http://localhost:3000/students/:id
-- [GET] http://localhost:3000/students/worst-homework
+- [GET] /students
+- [GET] /students/worst-homework

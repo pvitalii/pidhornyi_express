@@ -56,8 +56,8 @@ class StudentsStatsService {
     }
   ];
 
-  getStudentStatsById(id) {
-    return this.#studentsStats.find((studentStats) => studentStats.id === +id);
+  getStudentStats() {
+    return this.#studentsStats;
   }
 
   getWorstHomework() {
