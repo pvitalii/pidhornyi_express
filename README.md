@@ -11,17 +11,17 @@
 
 # Routes
 ## Users routes:
-- [GET] /users
-- [GET] /users/:email
-- [POST] /users
-- [PATCH] /users/:id
-- [DELETE] /users/:email
+- [GET] /users - Get all users
+- [GET] /users/:email - Get user by email
+- [POST] /users - Add new user
+- [PATCH] /users/:id - Update any of user`s fields
+- [DELETE] /users/:email - Delete user by email
 
 ## Articles routes
-- [GET] /articles
-- [POST] /articles
-- [PATCH] /articles/:id
+- [GET] /articles - Get all articles
+- [POST] /articles - Add new article
+- [PATCH] /articles/:id - Update only article`s tags
 
 ## Students stats routes
-- [GET] /students
-- [GET] /students/worst-homework
+- [GET] /students - Get all students stats
+- [GET] /students/worst-homework - Get stats of student with the worst homework score
